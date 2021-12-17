@@ -1,0 +1,36 @@
+Function timeeeee
+    Syntax
+        Py does not use the function keyword or curly braces;
+        we instead use the def keyword -> remembering to use snake_case;
+
+        def greet(person=None):
+            if person == None:
+                name = input('What is your name?')
+                return f'Hello there, {name}!'
+            else: return f'Hello there, {person}!'
+    
+    Arguments:
+        if we define a function with args we must use all of them;
+        This is why it was critical to pass person=None in func above;
+        This can get annoying when we have many arguments and have to track their order;
+
+        Py lets us use named args to get around this pesky order problem
+        when we call a function we can structure it like:
+
+        complex_function(arg2 = '', arg1 = '', etc;);
+    
+    Helper funcs:
+        help(funcName) will return the signature of that func ie:
+        help(complex_function) -> (arg2 = '', arg1 = '', etc);
+
+        dir(any_item) -> will list all available methods on that item;
+        help gives more information, but dir is quicker;
+        We must include a docstring in our functions if we want them to properly respond 
+        to dir or help 
+
+        a docstring is just a string in the first line of our def:
+        def add_two_nums(a,b):
+            """Expects two numbers, adds them together""
+            return a+b
+
+

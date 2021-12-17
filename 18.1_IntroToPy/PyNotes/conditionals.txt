@@ -1,0 +1,62 @@
+Boolean Comparisons
+        
+        True and False are capitalized in Python
+        Comparison Operators
+        all the familiar Operators from JS are here but we use one less = sign:
+        >
+        <
+        >=
+        <=
+         These operators will err if we try and compare differing data types;     
+         (strictly typed) 
+        == 
+       
+        !=
+         strict typing means we get true when comparing two lists with the same content;
+        is 
+        is not - checks for obj identity;
+            is/isnot arise from the strict typing above; we can check that two lists
+            reference the same item in memory with is/is not; thus mimicking the default 
+            behavior of JS when directly comparing arrs or objs;
+          
+    Logical Operators 
+        
+        Unlike Js, Py uses words for logical operators;
+        
+        || -> or
+        && -> and
+        !  -> not
+        These operators are prioritized in this order;
+
+    CODE BLOCKS
+    In js we use {} to create the blocks of our functions -> spacing doesn't matter;
+    In Python we simply use indentation; so spaces are incredibly important:
+    if age >= 18:
+        print("Time to vote!")
+        register_to_vote
+    If we forget to indent register_to_vote it will lay outside the coniditional, and execute
+    regardless of user age;
+
+    Coniditionals  
+        py uses if and else but else if is replaced with elif;
+        Ternary
+            In Js our ternary is formatted as:
+            condition ? 'do if true' : 'do if false';
+            In py we the quivalent is:
+            'do if true' if condition else 'do if false';
+            this would look something like:
+            print('Welcome') if (age >= 21) else print('Nuh-uh-uh');
+        Truthiness/Falsiness
+            Values are inherently truthy or falsy; In Py flasy values are 0, 0.0, "", None, False;
+            Basically, any blank value is considered inherently falsy - even [] and {};
+            we can check truthiness just like JS: 
+            not not value -> returns truthiness;
+        Loops
+            we still have while loops:
+            count = 5
+            while count >= 0:
+                print(count)
+                count -= 1;
+            print('GO!')`
+
+

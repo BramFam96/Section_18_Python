@@ -1,0 +1,31 @@
+JS:
+let snacks = ['cookie','candy','chips']
+for (let snack of snacks) {
+    console.log(snack)
+}
+Py:
+snacks = ['cookie','candy','chips']
+for snack in snacks:
+    print(f'I ate {snack}')
+
+///////RANGE()
+
+If we want to iterate a specific number of times Py provides range()
+range is formatted as range(start, *stop, *step)
+
+for num in range(10) -> returns a list of num from 0-10 not including 10;
+while list(range(-10,10,2)) will return a list of -10 - 10 by increments of 2!
+
+Quick fizzbuzz without while loop:
+
+for num in range(101):
+    if num > 0:
+        if num % 12 == 0:
+            print('fizzbuzz');
+        elif num % 6 == 0:
+            print('buzz');
+        elif num % 4 == 0:
+            print('fizz')
+        else:  print(num);
+    num +=1;
+Note: range(10) will not return anything itself;

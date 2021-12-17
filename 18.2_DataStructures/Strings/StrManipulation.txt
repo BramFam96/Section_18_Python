@@ -1,0 +1,17 @@
+Str are immutable but iterable;
+therefor we cannot splice new character into them;
+we can construct new strings with str(el);
+
+We have slice, we can use in, and we have various methods;
+Methods:
+
+    find them in python ds handout or easypythondocs;
+    OR
+    if we dir[str] or dir[''] we can get a list of their methods;
+    if we're confused about any, we can always help(str.method) for a full
+    description of expected inputs and outputs;
+    
+    str.find('char') -> has unexpected return;
+    if char does not exist we will get -1, despite -1 being a valid index;
+
+    

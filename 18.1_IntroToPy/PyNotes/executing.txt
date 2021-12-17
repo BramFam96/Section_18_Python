@@ -1,0 +1,19 @@
+say we have file-> file.py with the following in it:
+age = 19;
+guests = 0;
+if age >=18
+    print('Welcome!')
+    guests += 1
+
+we can execute this file two ways:
+    1
+        python3 path or file.py;
+        prints 'Welcome!'
+        and return us to a regular console
+    2 
+    we initialize ipython;
+    within it we can execute a file with %run path or file.py
+    this will execute and remain in the ipython environment
+
+    in this env we have access to our varibles -> age and guests;
+    they will equate to their final values after execution;

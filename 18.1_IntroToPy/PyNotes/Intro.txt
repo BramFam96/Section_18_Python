@@ -1,0 +1,69 @@
+Python
+    Python is initiated with ipython in the console.
+    In most cases where it differs from JS it is far simpler;
+
+    Variables
+
+        vars are lexically scoped, and not delcared with a keyword;
+        the syntax is snake_case all lower-cased with _ between words;
+        const do not exist. instead we just capitalize consts to
+        signify they shouldn't be changed
+
+    TYPES
+        like Js vars can be assigned new types of values; (loosely typed)
+        also like js data types come with inheret methods and limitations
+        we can check our vars type any time with type(var);
+        
+
+    Nums
+
+        there are multiple number types in Py -> int and float;
+        nums with decimals are floats;
+        we can easily convert them with float() and int();
+
+        we also have a num // num division method that floors our answer;
+        if we want to preserve float values we can use round(num, #decimal_places);
+        additionally we can use is_integer() to check if float is whole num;
+
+
+    Strings
+
+        Python uses "" or '' like js;
+
+        It also includes the triple quote: '''...''' or """...""";
+        which lets us define strings across multiple lines;
+
+        it also has f-strings that work like string template literals;
+
+        food = 'cheese'
+        print(f'I love {food}')
+
+        Boom! Even simpler than JS;
+
+    Lists
+
+        Lists are analgous to arrays in Js; just an ordered list;
+        We'll cover them in detail in a later section; for now its sufficient to note
+        that we can store heterogeneous data in them just like js arrays:
+
+        first_list = [1, 'john', true]
+    Booleans
+
+    null is replaced with None; None just signifies an empty value;
+
+    
+    Notes on conditionals can be found at conditional.txt;
+
+
+    Input Command 
+    b/c py runs in our console we can simply use input('some text') to prompt users to 
+    respond to our program;
+
+    answer =10
+    guess= None;
+    while guess != answer:
+        guess = input('Guess a number from 1-10! (..psst it's 10!)')
+        if guess == 'q' or guess = 'quit:
+            break;
+        guess = int(guess);
+    print('out of while loop')

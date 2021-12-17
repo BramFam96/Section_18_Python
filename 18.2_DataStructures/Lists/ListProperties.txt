@@ -1,0 +1,29 @@
+Like JS Arrays Py lists are reference data types;
+if we assign a list to a previous list they will point to the 
+same data in memory. 
+
+ie list1 is list2 and changing one will change the other;
+
+List declarations:
+
+    literal syntax: 
+    list = [1,2,3];
+
+    constructor syntax:
+    letters = list('apple'); -> ['a','p','p','l','e'];
+
+in operator:
+    check if a list contains something with in
+    if 'taco' in foods:
+        print('Cronch-smack');
+
+    range limits
+    in Js if we iterate beyond the limit of a arr we get undefined;
+    Py will not throw undefined, it will error and stop executing;
+
+    this will occur even if we try to add beyond the range; 
+list[len(list)] = 'dog'; will not work!
+
+
+ 
+

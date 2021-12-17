@@ -1,0 +1,35 @@
+Virtual Environment from scratch:
+    As we discussed b4, all imported packages are available globally in Py;
+    To version control b/w our projects we create virtual environments;
+    NOTE The steps for setting up venv's are:
+
+        mkdir venv_demo
+        cd venv_demo
+        python3 -m venv venv
+
+    This tells python to use the venv module to make a new file -> called 'venv'
+
+    source venv/bin/activate;
+
+    NOTE our command line begins with (venv) b/c its our new source;
+     This will boot us into our venv
+     NOTE we only have to make our venv once; Each time we reboot our project we will need
+     to rerun the source command above;
+
+     What does this do for us?
+
+     In our venv python refers to python3, because we used py3 to initialized it;
+     Again we do not have access to our global imports; We must explicitly
+     install any dependency we want;
+
+  NOTE when we're finished:
+
+    deactivate;
+
+    pip freeze > requirements.txt; -> creates a dependecy list in txt form;
+
+Venv from external repos:
+ Once we get clone a repo we follow the steps above to setup/initialize a virtual environment;
+ Once in our venv we call:
+    pip3 install -r requirements.txt;
+The recursive flag -r ensures that every dependency is read, and passed to pip install;

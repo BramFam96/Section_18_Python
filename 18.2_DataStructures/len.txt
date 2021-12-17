@@ -1,0 +1,2 @@
+len(item) is a general method that returns the length of any data type;
+

@@ -1,0 +1,55 @@
+As mentioned in ListProperties.txt, assigning a list to a new value does not make a new list;
+It instead exposes us to unintended mutations where changing our new list alters the original;
+
+However, we will be copying and working with lists all the time, so lets look at how we properly
+copy and work with ordered lists of data;
+
+Slicing:
+  
+    Py does not have a slice method like js; Instead slicing is built into list references;
+    Like Js, list[0] will return the first item in the list;
+    Unlike Js, py will accept multiple params when referencing our list;
+
+    The format is:
+
+        list[start=list[0]:*stop=list[len(list)]:*step=1];
+            where we can define our slice range and increment value 
+
+    For example:
+
+        list[0:3:1] will copy list[0]-list[2] (still not including last item);
+        list[0:] will copy the full list;
+        list[::-1] will give us a decrementing list;
+
+    Just be careful we are adding proper : for the params we're skipping;
+
+Splicing:
+  
+    Splicing in py uses the same syntax as slice, but we add an assignment at the end;
+    For example:
+        colors = ['red','blue','green'];
+    *       colors[0:1] = ['magenta','cyan'];
+        #colors = ['magenta','cyan', 'blue', 'green'];
+        #Note as with all py funcs item at index 1 is not modified;
+    *       colors[3:] = ['yellow','orange'];
+        #colors = ['magenta','cyan', 'blue', 'yellow', 'orange'];
+    *       color[3:] = [];
+        removes elements after index 3;\
+List methods:
+    Check the handout or easypythondocs for list of methods;
+    
+    Py's analog for push is append; append takes 1 el;
+    
+    new_list.copy(list); this is how we make working lists;
+    only does shallow copy;
+
+    l.count(sub_el); -> return count
+    l1.extends(l2) -> appends all of l2 onto l1;
+    li.insert(index, thing);
+    li.pop(*index=last) -> returns last el; we can also specify an index to pop;
+    li.reverse() -> reverses original list returns None;
+    li.sort() -> defaults to alphabetical, or ascending, will err for mixed data-types; returns None;
+
+
+
+
