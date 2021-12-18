@@ -9,9 +9,12 @@ class Colored_Triangle(Triangle):
     # In Py super() refers to our parent; super().__init__(...)
     def __init__(self, a,b, color):
         'Initializes a colored triangle with side a, b, and a color'
-#we do not need to pass self to our parent constructor; 
+    #we do not need to pass self to our parent constructor; 
         super().__init__(a,b);
         self.color = color;
+    def __repr__(self):
+        msg = super().__repr__()
+        return f'Colored_{msg[:len(msg)-1:]}, color={self.color})'
 # we can override inheritted methods by modifying them directly:
     def structure(self):
         'Describes the structure of a colored triangle instance'

@@ -6,7 +6,15 @@ from random import randint
 
 
 class Triangle:
-    '''Makes Right triangles'''
+    '''
+    A class used to make Right triangles
+    
+    Attributes:
+    ___________
+    a(int): side a
+    b(int): side b
+    
+    '''
     # JS constructor is replaced with a dunder method, typically named init;
     # This init method is automatically called when a triangle is initialized;
     # All regular methods in class are passed the instance obj;
@@ -16,12 +24,16 @@ class Triangle:
         '''Initializes triangle with side a and b'''
         self.a = a;
         self.b = b;
+    def __repr__(self):
+        return f'Triangle(a={self.a}, b={self.b})'
     def get_hypo(self):
         '''Calculates hypotenuse'''
         return sqrt(self.a **2 + self.b**2)
+    
     def get_area(self):
         '''Calculates area'''
         return (self.a*self.b*0.5);
+    
     def structure(self):
         '''Describes the triangle instance'''
         return f'Triangle with sides: {self.a}, {self.b}, and {self.get_hypo()}'
@@ -35,6 +47,7 @@ class Triangle:
     # NOTE classmethods are passed the class itself, not the instance. 
     @classmethod
     def random(cls):
+        '''Creates a triangle with sides ranging from 1-10'''
         return cls(randint(1,10),randint(1,10))
 
 
